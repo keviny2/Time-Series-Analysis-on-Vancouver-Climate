@@ -128,8 +128,7 @@ The lowest AIC corresponds to the SARIMA(1,0,1)x(1,0,1)_12. The ACF of the resid
 ```{r results='hide',out.height='70%',out.width='70%',fig.align='center'}
 sarima(climate.ts,1,0,1,1,0,1,12) ## 3.71
 ```
-\
-\
+
 Since the time series is seasonal, the Holt Winters Exponential Smoothing method is appropriate to forecast temperatures for 2020. Figure 6 below shows a plot including the forecasted data points for the series. The fitted line appears to be similar to prior years, but the upper and lower bounds do fluctuate quite a bit.
 ``` {r echo=FALSE, results='hide', fig.cap='Forecasted values for 2020 using the Holt Winters Exponential Smoothing Method'}
 climateModel <- HoltWinters(climate.ts, beta=FALSE, seasonal = "additive")
