@@ -124,7 +124,7 @@ ggtexttable(df, rows=NULL, theme = ttheme("mBlue"))
 ```
 
 The lowest AIC corresponds to the SARIMA(1,0,1)x(1,0,1)_12. The ACF of the residuals do not have any significant values at 95% confidence, the Q-Q plot suggests normality of the standardized residuals, and the p-values for the Ljung Box statistic are all significant. All these indicate that the model is a good fit to the series. Due to the many models attempted, only the coefficients and complete results for the winning model (SARIMA(1,0,1)x(1,0,1)_12) is displayed below.\
-\
+
 ```{r results='hide',out.height='70%',out.width='70%',fig.align='center'}
 ##sarima(climate.ts, 4,0,4,4,0,2,12) ## AIC: 3.79
 ##sarima(climate.ts,4,0,2,4,0,2,12) ## AIC: 3.75
